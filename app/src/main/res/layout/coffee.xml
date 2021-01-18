@@ -80,6 +80,7 @@
 
             <!-- small -->
             <LinearLayout
+                android:id="@+id/small"
                 android:layout_width="90dp"
                 android:layout_height="100dp"
                 android:orientation="vertical"
@@ -87,12 +88,14 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/imgSmall"
                     android:layout_width="30dp"
                     android:layout_height="45dp"
                     android:backgroundTint="#C38B60"
                     android:background="@drawable/ic_way"/>
 
                 <TextView
+                    android:id="@+id/txtSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="300ml"
@@ -110,6 +113,7 @@
 
             <!-- medium -->
             <LinearLayout
+                android:id="@+id/medium"
                 android:layout_width="90dp"
                 android:layout_height="100dp"
                 android:orientation="vertical"
@@ -117,12 +121,14 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/imgMedium"
                     android:layout_width="30dp"
                     android:layout_height="45dp"
                     android:backgroundTint="#C38B60"
                     android:background="@drawable/ic_way"/>
 
                 <TextView
+                    android:id="@+id/txtMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="500ml"
@@ -140,6 +146,7 @@
 
             <!-- big -->
             <LinearLayout
+                android:id="@+id/big"
                 android:layout_width="90dp"
                 android:layout_height="100dp"
                 android:orientation="vertical"
@@ -147,12 +154,14 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/imgBig"
                     android:layout_width="30dp"
                     android:layout_height="45dp"
                     android:backgroundTint="#C38B60"
                     android:background="@drawable/ic_way"/>
 
                 <TextView
+                    android:id="@+id/txtBig"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="700ml"
@@ -224,7 +233,8 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left|center"
                 android:orientation="horizontal">
 
                 <TextView
@@ -253,17 +263,10 @@
                     android:textColor="@color/brown_dark"
                     android:text="Qtd: "/>
 
-                <EditText
+                <NumberPicker
                     android:id="@+id/qtd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:hint="0"
-                    android:inputType="numberDecimal"
-                    android:maxLength="2"
-                    android:textColor="@color/brown_dark"
-                    android:backgroundTint="@color/brown_dark"
-                    android:layout_marginHorizontal="5dp"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
 
             </LinearLayout>
 
@@ -284,6 +287,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:textColor="@color/brown_dark"
+                    android:maxLength="8"
                     android:text="R$0,00"/>
 
             </LinearLayout>
@@ -310,7 +314,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Add Itens"
+                    android:text="Alterar Item"
                     android:paddingHorizontal="20dp"
                     android:textColor="@color/brown_dark"/>
 

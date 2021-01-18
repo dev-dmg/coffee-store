@@ -15,5 +15,8 @@
     <color name="brown_dark">#653c1c</color>
     <color name="brown">#e49a4d</color>
 
+    <color name="card">#FFEAD8</color>
+    <color name="card_off">#C38B60</color>
+
 
 </resources>

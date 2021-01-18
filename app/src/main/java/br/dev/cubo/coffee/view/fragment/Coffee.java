@@ -1,6 +1,8 @@
 package br.dev.cubo.coffee.view.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +10,13 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
@@ -28,11 +32,16 @@ public class Coffee extends Fragment {
     private View v;
     private ListView list;
     private String name, desc;
-    private double money, qtdValue, all;
+    private double money, all;
+    private boolean keySmall, keyMedium, keyBig;
 
     private LinearLayout cardChoice,addCart,close;
     private TextView valueAll,valueMoney,descProd,nameProd;
-    private EditText qtd;
+    private TextView txtSmall, txtMedium, txtBig;
+    private ImageView imgSmall, imgMedium, imgBig;
+    private LinearLayout small, medium, big;
+    private NumberPicker qtd;
+    int valuePk;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -77,17 +86,137 @@ public class Coffee extends Fragment {
         descProd.setText(desc);
         nameProd.setText(name);
 
-        String value = qtd.getText().toString();
-        qtdValue = Double.parseDouble(value);
-
-        //amount of values
-        amount();
-
-        String allm = String.valueOf(all);
-        valueAll.setText("R$ " + allm);
+        //get amount product
+        qtdProduct();
 
         //get btn
         getButton();
+
+        //get size cup
+        getSize();
+
+    }
+
+    /** change size cup **/
+    private void getSize() {
+
+        small.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+
+                keySmall = true;
+                keyMedium = false;
+                keyBig = false;
+
+                // change config
+                changeCup();
+            }
+        });
+
+        medium.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+
+                keySmall = false;
+                keyMedium = true;
+                keyBig = false;
+
+                // change config
+                changeCup();
+            }
+        });
+
+        big.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+
+                keySmall = false;
+                keyMedium = false;
+                keyBig = true;
+
+                // change config
+                changeCup();
+            }
+        });
+
+
+    }
+
+    /** change size cup **/
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private void changeCup() {
+
+        if (keySmall){
+
+            small.setBackgroundResource(R.drawable.size_card_on);
+            txtSmall.setTextColor(getResources().getColor(R.color.card));
+            imgSmall.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card)));
+
+            medium.setBackgroundResource(R.drawable.size_card);
+            txtMedium.setTextColor(getResources().getColor(R.color.card_off));
+            imgMedium.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+            big.setBackgroundResource(R.drawable.size_card);
+            txtBig.setTextColor(getResources().getColor(R.color.card_off));
+            imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+        }
+
+        if (keyMedium){
+
+            small.setBackgroundResource(R.drawable.size_card);
+            txtSmall.setTextColor(getResources().getColor(R.color.card_off));
+            imgSmall.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+            medium.setBackgroundResource(R.drawable.size_card_on);
+            txtMedium.setTextColor(getResources().getColor(R.color.card));
+            imgMedium.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card)));
+
+            big.setBackgroundResource(R.drawable.size_card);
+            txtBig.setTextColor(getResources().getColor(R.color.card_off));
+            imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+        }
+
+        if (keyBig){
+
+            small.setBackgroundResource(R.drawable.size_card);
+            txtSmall.setTextColor(getResources().getColor(R.color.card_off));
+            imgSmall.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+            medium.setBackgroundResource(R.drawable.size_card);
+            txtMedium.setTextColor(getResources().getColor(R.color.card_off));
+            imgMedium.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+            big.setBackgroundResource(R.drawable.size_card_on);
+            txtBig.setTextColor(getResources().getColor(R.color.card));
+            imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card)));
+
+        }
+;
+
+    }
+
+    /** change amount product **/
+    private void qtdProduct() {
+
+        qtd.setMaxValue(20);
+        qtd.setMinValue(0);
+
+        qtd.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+
+                valuePk = qtd.getValue();
+
+                //amount of values
+                amount();
+            }
+        });
+
 
     }
 
@@ -102,11 +231,26 @@ public class Coffee extends Fragment {
         });
 
         close.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
 
                 list.setVisibility(View.VISIBLE);
                 cardChoice.setVisibility(View.GONE);
+                valueAll.setText("R$ 0.00");
+                qtd.setValue(0);
+
+                small.setBackgroundResource(R.drawable.size_card);
+                txtSmall.setTextColor(getResources().getColor(R.color.card_off));
+                imgSmall.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+                medium.setBackgroundResource(R.drawable.size_card);
+                txtMedium.setTextColor(getResources().getColor(R.color.card_off));
+                imgMedium.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+                big.setBackgroundResource(R.drawable.size_card);
+                txtBig.setTextColor(getResources().getColor(R.color.card_off));
+                imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
 
             }
         });
@@ -115,7 +259,11 @@ public class Coffee extends Fragment {
     /** amount **/
     private void amount() {
 
-        all = qtdValue * money;
+        double val = Double.parseDouble(String.valueOf(valuePk));
+        all = val * money;
+
+        String showValue = String.valueOf(all);
+        valueAll.setText("R$ " + showValue);
 
     }
 
@@ -151,5 +299,18 @@ public class Coffee extends Fragment {
         nameProd = v.findViewById(R.id.nameProd);
 
         qtd = v.findViewById(R.id.qtd);
+
+        txtSmall = v.findViewById(R.id.txtSmall);
+        txtMedium = v.findViewById(R.id.txtMedium);
+        txtBig = v.findViewById(R.id.txtBig);
+
+        imgSmall = v.findViewById(R.id.imgSmall);
+        imgMedium = v.findViewById(R.id.imgMedium);
+        imgBig = v.findViewById(R.id.imgBig);
+
+        small = v.findViewById(R.id.small);
+        medium = v.findViewById(R.id.medium);
+        big = v.findViewById(R.id.big);
+
     }
 }
