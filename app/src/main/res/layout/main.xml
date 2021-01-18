@@ -106,7 +106,7 @@
 
         <!-- btn eat -->
         <LinearLayout
-            android:id="@+id/eat"
+            android:id="@+id/cart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -114,13 +114,13 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imgEat"
+                android:id="@+id/imgCart"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_eat_off" />
+                android:src="@drawable/ic_cart_off" />
 
             <LinearLayout
-                android:id="@+id/lineEat"
+                android:id="@+id/lineCart"
                 android:layout_width="10dp"
                 android:layout_height="4dp"
                 android:layout_marginTop="10dp"
@@ -132,7 +132,7 @@
 
         <!-- btn about -->
         <LinearLayout
-            android:id="@+id/about"
+            android:id="@+id/setting"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -140,13 +140,13 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imgAbout"
+                android:id="@+id/imgSetting"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_about_off" />
+                android:src="@drawable/ic_settings_off" />
 
             <LinearLayout
-                android:id="@+id/lineAbout"
+                android:id="@+id/lineSetting"
                 android:layout_width="10dp"
                 android:layout_height="4dp"
                 android:layout_marginTop="10dp"

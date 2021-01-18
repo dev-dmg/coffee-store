@@ -36,12 +36,12 @@ import br.dev.cubo.coffee.view.fragment.Home;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Boolean keyStore, keyCoffee, keyEat, keyAbout;
+    private Boolean keyStore, keyCoffee, keyCart, keySetting;
 
-    private ImageView imgStore,imgCoffee,imgEat,imgAbout;
+    private ImageView imgStore,imgCoffee,imgCart,imgSetting;
 
-    private LinearLayout lineAbout, lineEat,lineCoffee,lineStore;
-    private LinearLayout store,coffee,eat,about;
+    private LinearLayout lineSetting, lineCart,lineCoffee,lineStore;
+    private LinearLayout store,coffee,cart,setting;
     private LinearLayout containerMain,navTop;
 
     private Animation up, down;
@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
                 keyStore = true;
                 keyCoffee = false;
-                keyEat = false;
-                keyAbout = false;
+                keyCart = false;
+                keySetting = false;
 
                 changeButtons();
 
@@ -105,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
                 keyStore = false;
                 keyCoffee = true;
-                keyEat = false;
-                keyAbout = false;
+                keyCart = false;
+                keySetting = false;
 
                 changeButtons();
 
@@ -119,14 +119,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //eat bnt
-        eat.setOnClickListener(new View.OnClickListener() {
+        cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 keyStore = false;
                 keyCoffee = false;
-                keyEat = true;
-                keyAbout = false;
+                keyCart = true;
+                keySetting = false;
 
                 changeButtons();
 
@@ -139,14 +139,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //about bnt
-        about.setOnClickListener(new View.OnClickListener() {
+        setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 keyStore = false;
                 keyCoffee = false;
-                keyEat = false;
-                keyAbout = true;
+                keyCart = false;
+                keySetting = true;
 
                 changeButtons();
 
@@ -166,13 +166,13 @@ public class MainActivity extends AppCompatActivity {
 
             imgStore.setImageResource(R.drawable.ic_store_on);
             imgCoffee.setImageResource(R.drawable.ic_coffee_off);
-            imgEat.setImageResource(R.drawable.ic_eat_off);
-            imgAbout.setImageResource(R.drawable.ic_about_off);
+            imgCart.setImageResource(R.drawable.ic_cart_off);
+            imgSetting.setImageResource(R.drawable.ic_settings_off);
 
             lineStore.setVisibility(View.VISIBLE);
             lineCoffee.setVisibility(View.GONE);
-            lineEat.setVisibility(View.GONE);
-            lineAbout.setVisibility(View.GONE);
+            lineCart.setVisibility(View.GONE);
+            lineSetting.setVisibility(View.GONE);
 
             lineStore.startAnimation(up);
 
@@ -186,13 +186,13 @@ public class MainActivity extends AppCompatActivity {
 
             imgStore.setImageResource(R.drawable.ic_store_off);
             imgCoffee.setImageResource(R.drawable.ic_coffee_on);
-            imgEat.setImageResource(R.drawable.ic_eat_off);
-            imgAbout.setImageResource(R.drawable.ic_about_off);
+            imgCart.setImageResource(R.drawable.ic_cart_off);
+            imgSetting.setImageResource(R.drawable.ic_settings_off);
 
             lineStore.setVisibility(View.GONE);
             lineCoffee.setVisibility(View.VISIBLE);
-            lineEat.setVisibility(View.GONE);
-            lineAbout.setVisibility(View.GONE);
+            lineCart.setVisibility(View.GONE);
+            lineSetting.setVisibility(View.GONE);
 
             lineCoffee.startAnimation(up);
 
@@ -202,19 +202,19 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if (keyEat){
+        if (keyCart){
 
             imgStore.setImageResource(R.drawable.ic_store_off);
             imgCoffee.setImageResource(R.drawable.ic_coffee_off);
-            imgEat.setImageResource(R.drawable.ic_eat_on);
-            imgAbout.setImageResource(R.drawable.ic_about_off);
+            imgCart.setImageResource(R.drawable.ic_cart_on);
+            imgSetting.setImageResource(R.drawable.ic_settings_off);
 
             lineStore.setVisibility(View.GONE);
             lineCoffee.setVisibility(View.GONE);
-            lineEat.setVisibility(View.VISIBLE);
-            lineAbout.setVisibility(View.GONE);
+            lineCart.setVisibility(View.VISIBLE);
+            lineSetting.setVisibility(View.GONE);
 
-            lineEat.startAnimation(up);
+            lineCart.startAnimation(up);
 
             Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
             long milliseconds = 50;
@@ -222,19 +222,19 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if (keyAbout){
+        if (keySetting){
 
             imgStore.setImageResource(R.drawable.ic_store_off);
             imgCoffee.setImageResource(R.drawable.ic_coffee_off);
-            imgEat.setImageResource(R.drawable.ic_eat_off);
-            imgAbout.setImageResource(R.drawable.ic_about_on);
+            imgCart.setImageResource(R.drawable.ic_cart_off);
+            imgSetting.setImageResource(R.drawable.ic_settings_on);
 
             lineStore.setVisibility(View.GONE);
             lineCoffee.setVisibility(View.GONE);
-            lineEat.setVisibility(View.GONE);
-            lineAbout.setVisibility(View.VISIBLE);
+            lineCart.setVisibility(View.GONE);
+            lineSetting.setVisibility(View.VISIBLE);
 
-            lineAbout.startAnimation(up);
+            lineSetting.startAnimation(up);
 
             Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
             long milliseconds = 50;
@@ -249,18 +249,18 @@ public class MainActivity extends AppCompatActivity {
 
         imgStore = findViewById(R.id.imgStore);
         imgCoffee = findViewById(R.id.imgCoffee);
-        imgEat = findViewById(R.id.imgEat);
-        imgAbout = findViewById(R.id.imgAbout);
+        imgCart = findViewById(R.id.imgCart);
+        imgSetting = findViewById(R.id.imgSetting);
 
-        lineAbout = findViewById(R.id.lineAbout);
-        lineEat = findViewById(R.id.lineEat);
+        lineSetting = findViewById(R.id.lineSetting);
+        lineCart = findViewById(R.id.lineCart);
         lineCoffee = findViewById(R.id.lineCoffee);
         lineStore = findViewById(R.id.lineStore);
 
         store = findViewById(R.id.store);
         coffee = findViewById(R.id.coffee);
-        eat = findViewById(R.id.eat);
-        about = findViewById(R.id.about);
+        cart = findViewById(R.id.cart);
+        setting = findViewById(R.id.setting);
 
         containerMain = findViewById(R.id.containerMain);
 //        navTop = findViewById(R.id.navTop);
