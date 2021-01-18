@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.MainActivity">
+
+<!--    &lt;!&ndash;nav top&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/navTop"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingVertical="20dp"-->
+<!--        android:paddingLeft="5dp"-->
+<!--        android:paddingRight="20dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:background="@drawable/ic_nav"-->
+<!--            android:backgroundTint="@color/brown_dark"-->
+<!--            android:rotation="90" />-->
+
+<!--    </LinearLayout>-->
+
+    <!--container-->
+    <LinearLayout
+        android:id="@+id/containerMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/navBottom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--nav bottom-->
+    <LinearLayout
+        android:id="@+id/navBottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/nav"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- btn store -->
+        <LinearLayout
+            android:id="@+id/store"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgStore"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_store_on" />
+
+            <LinearLayout
+                android:id="@+id/lineStore"
+                android:layout_width="10dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/nav_line"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- btn coffee -->
+        <LinearLayout
+            android:id="@+id/coffee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgCoffee"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_coffee_off" />
+
+            <LinearLayout
+                android:id="@+id/lineCoffee"
+                android:layout_width="10dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/nav_line"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- btn eat -->
+        <LinearLayout
+            android:id="@+id/eat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgEat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_eat_off" />
+
+            <LinearLayout
+                android:id="@+id/lineEat"
+                android:layout_width="10dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/nav_line"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- btn about -->
+        <LinearLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgAbout"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_about_off" />
+
+            <LinearLayout
+                android:id="@+id/lineAbout"
+                android:layout_width="10dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/nav_line"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
