@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -36,7 +38,7 @@ public class Coffee extends Fragment {
 
     private View v;
     private ListView list;
-    private String name, desc,smallCup,mediumCup,bigCup,showValue = "R$ 0.00";
+    private String name,desc,smallCup,mediumCup,bigCup,paymtKey,showValue = "R$ 0.00";
     private double money, all, val;
     private boolean keySmall, keyMedium, keyBig;
 
@@ -54,6 +56,12 @@ public class Coffee extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.coffee, container, false);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getResources().getColor(R.color.status));
+        }
 
         getComponents();
 
@@ -208,7 +216,6 @@ public class Coffee extends Fragment {
 
             bigCup = "700ml";
         }
-;
 
     }
 
@@ -252,6 +259,7 @@ public class Coffee extends Fragment {
                         editor.putString("allValue_key", String.valueOf(showValue));
                         editor.putString("name_key", String.valueOf(name));
                         editor.putString("qtd_key", String.valueOf(val));
+                        editor.putString("paymt_key", (paymtKey = "true"));
 
                         if (keySmall){
                             editor.putString("small_key", (smallCup));
@@ -260,15 +268,15 @@ public class Coffee extends Fragment {
                         }
 
                         if (keyMedium){
-                            editor.putString("small_key", (mediumCup));
+                            editor.putString("medium_key", (mediumCup));
                         }else {
-                            editor.putString("small_key", (mediumCup = "0ml" ));
+                            editor.putString("medium_key", (mediumCup = "0ml" ));
                         }
 
                         if (keyBig){
-                            editor.putString("small_key", (bigCup));
+                            editor.putString("big_key", (bigCup));
                         }else {
-                            editor.putString("small_key", (bigCup = "0ml" ));
+                            editor.putString("big_key", (bigCup = "0ml" ));
                         }
 
                         editor.apply();
