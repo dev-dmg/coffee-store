@@ -1,6 +1,8 @@
 package br.dev.cubo.coffee.view.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,9 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,8 +36,8 @@ public class Coffee extends Fragment {
 
     private View v;
     private ListView list;
-    private String name, desc;
-    private double money, all;
+    private String name, desc,smallCup,mediumCup,bigCup,showValue = "R$ 0.00";
+    private double money, all, val;
     private boolean keySmall, keyMedium, keyBig;
 
     private LinearLayout cardChoice,addCart,close;
@@ -42,6 +47,8 @@ public class Coffee extends Fragment {
     private LinearLayout small, medium, big;
     private NumberPicker qtd;
     int valuePk;
+
+    public static final String CART = "value_buy";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -163,6 +170,8 @@ public class Coffee extends Fragment {
             txtBig.setTextColor(getResources().getColor(R.color.card_off));
             imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
 
+            smallCup = "300ml";
+
         }
 
         if (keyMedium){
@@ -178,6 +187,8 @@ public class Coffee extends Fragment {
             big.setBackgroundResource(R.drawable.size_card);
             txtBig.setTextColor(getResources().getColor(R.color.card_off));
             imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card_off)));
+
+            mediumCup = "500ml";
 
         }
 
@@ -195,6 +206,7 @@ public class Coffee extends Fragment {
             txtBig.setTextColor(getResources().getColor(R.color.card));
             imgBig.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.card)));
 
+            bigCup = "700ml";
         }
 ;
 
@@ -227,6 +239,53 @@ public class Coffee extends Fragment {
             @Override
             public void onClick(View view) {
 
+                if (smallCup == "300ml" || mediumCup == "500ml" || bigCup == "700ml"){
+
+                    if (showValue == "R$ 0.00"){
+
+                        Toast.makeText(getActivity(),"DEFINA A QUANTIDADE", Toast.LENGTH_LONG).show();
+
+                    }else {
+
+                        SharedPreferences sharedPreferences = getContext().getSharedPreferences(CART, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("allValue_key", String.valueOf(showValue));
+                        editor.putString("name_key", String.valueOf(name));
+                        editor.putString("qtd_key", String.valueOf(val));
+
+                        if (keySmall){
+                            editor.putString("small_key", (smallCup));
+                        }else {
+                            editor.putString("small_key", (smallCup = "0ml" ));
+                        }
+
+                        if (keyMedium){
+                            editor.putString("small_key", (mediumCup));
+                        }else {
+                            editor.putString("small_key", (mediumCup = "0ml" ));
+                        }
+
+                        if (keyBig){
+                            editor.putString("small_key", (bigCup));
+                        }else {
+                            editor.putString("small_key", (bigCup = "0ml" ));
+                        }
+
+                        editor.apply();
+
+                        Cart cart = new Cart();
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.containerMain, cart, "cart")
+                                .commit();
+
+                    }
+
+                }else {
+
+                    Toast.makeText(getActivity(),"DEFINA O TAMANHO", Toast.LENGTH_LONG).show();
+
+                }
+
             }
         });
 
@@ -238,7 +297,12 @@ public class Coffee extends Fragment {
                 list.setVisibility(View.VISIBLE);
                 cardChoice.setVisibility(View.GONE);
                 valueAll.setText("R$ 0.00");
+                showValue = "R$ 0.00";
                 qtd.setValue(0);
+
+                smallCup = null;
+                mediumCup = null;
+                bigCup = null;
 
                 small.setBackgroundResource(R.drawable.size_card);
                 txtSmall.setTextColor(getResources().getColor(R.color.card_off));
@@ -259,10 +323,10 @@ public class Coffee extends Fragment {
     /** amount **/
     private void amount() {
 
-        double val = Double.parseDouble(String.valueOf(valuePk));
+        val = Double.parseDouble(String.valueOf(valuePk));
         all = val * money;
 
-        String showValue = String.valueOf(all);
+        showValue = String.valueOf(all);
         valueAll.setText("R$ " + showValue);
 
     }

@@ -15,9 +15,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import br.dev.cubo.coffee.R;
-import br.dev.cubo.coffee.view.fragment.About;
+import br.dev.cubo.coffee.view.fragment.Settings;
 import br.dev.cubo.coffee.view.fragment.Coffee;
-import br.dev.cubo.coffee.view.fragment.Eat;
+import br.dev.cubo.coffee.view.fragment.Cart;
 import br.dev.cubo.coffee.view.fragment.Home;
 
 /**
@@ -130,10 +130,10 @@ public class MainActivity extends AppCompatActivity {
 
                 changeButtons();
 
-                Eat eat = new Eat();
+                Cart cart = new Cart();
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.containerMain, eat);
+                ft.replace(R.id.containerMain, cart);
                 ft.commit();
             }
         });
@@ -150,10 +150,10 @@ public class MainActivity extends AppCompatActivity {
 
                 changeButtons();
 
-                About about = new About();
+                Settings settings = new Settings();
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.containerMain, about);
+                ft.replace(R.id.containerMain, settings);
                 ft.commit();
             }
         });

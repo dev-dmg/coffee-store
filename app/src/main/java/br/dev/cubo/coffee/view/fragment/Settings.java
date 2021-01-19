@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import br.dev.cubo.coffee.R;
 
-public class About extends Fragment {
+public class Settings extends Fragment {
 
     private View v;
 
@@ -17,7 +17,7 @@ public class About extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.about, container, false);
+        v = inflater.inflate(R.layout.settings, container, false);
 
         return  v;
     }

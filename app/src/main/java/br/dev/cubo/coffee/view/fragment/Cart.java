@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment;
 
 import br.dev.cubo.coffee.R;
 
-public class Eat extends Fragment {
+public class Cart extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.eat, container, false);
+        return inflater.inflate(R.layout.cart, container, false);
     }
 }
