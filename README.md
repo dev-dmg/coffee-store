@@ -17,3 +17,9 @@ Presentation of the total purchase price
 Possibility to apply discount on sale
 Finalization of the sale in one or more forms of payment: cash, debit and / or credit.
 
+-> Melhor Interfaces
+-> Melhor Usabilidade
+-> Melhor Transicões entre Telas
+-> Add Conta e Cartão de Credito
+-> Add Scaner e pagamento com QrCode
+-> Settings
