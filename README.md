@@ -39,7 +39,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 ## programming language
 - Java 
 
-## updates
+## upcoming updates
 - Best Interfaces
 - Better Usability
 - Best Transitions Between Screens
