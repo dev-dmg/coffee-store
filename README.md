@@ -40,54 +40,10 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 
 
 
+> ###### © 2021 all rights reserved
 
-
-###### PT Brasil
-
-
-
-## funcionalidades
-- Lista de produtos
-- Imagens dos produtos
-- Nome dos produtos e valores 
-- Seleção dos produtos
-- Carrinho de compra
-- Quantidade de produtos desejada para compra
-- Adicionar observação
-- Apresentação do valor total da compra
-- Cupon de desconto
-- Finalização da compra
-- Formas de pagamento: dinheiro, débito e/ou crédito
-
-## recursos usados
-- Tela de abertura
-- Sides de introdução
-- Rolar 
-- Exibição de lista
-- Adaptador
-- Objeto
-- Animação
-- Atividade
-- Permissão de uso
-- Orientação da tela
-- Fragmento
-
-###### atualizações
-- Melhores Interfaces
-- Melhor Usabilidade
-- Melhores transições entre telas
-- Adicionar conta e cartão de crédito
-- Adicionar scanner e pagamento com QrCode
-- Banco de dados
-- Configurações
-- Criar Login
-
-
-
-###### © 2021 all rights reserved
-
-###### Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
-###### Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
+> ###### Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
+> ###### Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
 
 
 
