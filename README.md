@@ -19,31 +19,30 @@ Projeto de demonstração de aplicativo para cafeteria
 - Payment methods: cash, debit and / or credit
 
 # resources used
-Splash screen
-Onboarding
-ScrollView 
-ListView
-Adapter
-Object
-Animation
-Activity
-Uses-permission
-ScreenOrientation
-Fragment
+- Splash screen
+- Onboarding
+- ScrollView 
+- ListView
+- Adapter
+- Object
+- Animation
+- Activity
+- Uses-permission
+- ScreenOrientation
+- Fragment
 
 # updates
-Best Interfaces
-Better Usability
-Best Transitions Between Screens
-Add Account and Credit Card
-Add Scanner and payment with QrCode
-SQLiteStudio
-Settings
-Login
+- Best Interfaces
+- Better Usability
+- Best Transitions Between Screens
+- Add Account and Credit Card
+- Add Scanner and payment with QrCode
+- SQLiteStudio
+- Settings
+- Login
 
 
-======================================
-======================================
+//------------------------->
 
 
 -> Brasil PT
@@ -85,17 +84,16 @@ Login
 - Criar Login
 
 
-======================================
-======================================
+//------------------------->
 
 
 -> © 2021 all rights reserved
 
 Vetores: Freepik - Customizado por Djonatha M. Gomes
-https://www.freepik.com
+- https://www.freepik.com
 
 Desgin & Desenvolvimento: Djonatha M. Gomes
-http://www.cubo.dev.br
+- http://www.cubo.dev.br
 
 
 
