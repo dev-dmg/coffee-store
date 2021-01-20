@@ -14,10 +14,11 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Discount coupon
 - Checkout
 - Payment methods: cash, debit and / or credit
-
-## resources used
 - Splash screen
 - Onboarding
+- Object
+
+## resources used
 - ScrollView 
 - NumberPicker
 - TextView
@@ -29,7 +30,6 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Toast
 - ListView
 - Adapter
-- Object
 - Animation
 - Activity
 - Uses-permission
