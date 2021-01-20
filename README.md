@@ -2,7 +2,7 @@
 Demo project of an app for a coffee shop [ Projeto de demonstração de aplicativo para cafeteria ]
 
 
-###### functionalities
+## functionalities
 - Product list
 - Products Pictures
 - Product names and values
@@ -15,7 +15,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Checkout
 - Payment methods: cash, debit and / or credit
 
-###### resources used
+## resources used
 - Splash screen
 - Onboarding
 - ScrollView 
@@ -28,7 +28,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - ScreenOrientation
 - Fragment
 
-###### updates
+## updates
 - Best Interfaces
 - Better Usability
 - Best Transitions Between Screens
@@ -42,11 +42,11 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 
 
 
-> PT Brasil
+###### PT Brasil
 
 
 
-###### funcionalidades
+## funcionalidades
 - Lista de produtos
 - Imagens dos produtos
 - Nome dos produtos e valores 
@@ -59,7 +59,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Finalização da compra
 - Formas de pagamento: dinheiro, débito e/ou crédito
 
-###### recursos usados
+## recursos usados
 - Tela de abertura
 - Sides de introdução
 - Rolar 
@@ -84,10 +84,10 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 
 
 
-> © 2021 all rights reserved
+###### © 2021 all rights reserved
 
-> Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
-> Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
+###### Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
+###### Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
 
 
 
