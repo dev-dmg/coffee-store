@@ -36,6 +36,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Add Scanner and payment with QrCode
 - SQLiteStudio
 - Settings
+- Dialog
 - Login
 
 
