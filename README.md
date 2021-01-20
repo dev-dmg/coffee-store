@@ -19,6 +19,14 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Splash screen
 - Onboarding
 - ScrollView 
+- NumberPicker
+- TextView
+- ImageView
+- EditText
+- LinearLayout
+- RelativeLayout 
+- ConstraintLayout 
+- Toast
 - ListView
 - Adapter
 - Object
