@@ -1,9 +1,7 @@
 # coffee-store
-Demo project of an app for a coffee shop
-Projeto de demonstração de aplicativo para cafeteria
+Demo project of an app for a coffee shop [ Projeto de demonstração de aplicativo para cafeteria ]
 
 
--> English USA
 
 # functionalities
 - Product list
@@ -42,12 +40,12 @@ Projeto de demonstração de aplicativo para cafeteria
 - Login
 
 
+
 //------------------------->
 
 
--> Brasil PT
 
-# functionalities
+# funcionalidades
 - Lista de produtos
 - Imagens dos produtos
 - Nome dos produtos e valores 
@@ -60,7 +58,7 @@ Projeto de demonstração de aplicativo para cafeteria
 - Finalização da compra
 - Formas de pagamento: dinheiro, débito e/ou crédito
 
-# resources used
+# recursos usados
 - Tela de abertura
 - Sides de introdução
 - Rolar 
@@ -73,7 +71,7 @@ Projeto de demonstração de aplicativo para cafeteria
 - Orientação da tela
 - Fragmento
 
-# updates
+# atualizações
 - Melhores Interfaces
 - Melhor Usabilidade
 - Melhores transições entre telas
@@ -84,16 +82,15 @@ Projeto de demonstração de aplicativo para cafeteria
 - Criar Login
 
 
+
 //------------------------->
 
 
--> © 2021 all rights reserved
 
-Vetores: Freepik - Customizado por Djonatha M. Gomes
-- https://www.freepik.com
+© 2021 all rights reserved
 
-Desgin & Desenvolvimento: Djonatha M. Gomes
-- http://www.cubo.dev.br
+Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
+Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
 
 
 
