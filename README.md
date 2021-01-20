@@ -2,7 +2,6 @@
 Demo project of an app for a coffee shop [ Projeto de demonstração de aplicativo para cafeteria ]
 
 
-
 # functionalities
 - Product list
 - Products Pictures
@@ -41,7 +40,9 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 
 
 
-//------------------------->
+
+
+> PT Brasil
 
 
 
@@ -83,14 +84,10 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 
 
 
-//------------------------->
+> © 2021 all rights reserved
 
-
-
-© 2021 all rights reserved
-
-Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
-Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
+> Vetores: Freepik - Customizado por Djonatha M. Gomes - https://www.freepik.com
+> Desgin & Desenvolvimento: Djonatha M. Gomes - http://www.cubo.dev.br
 
 
 
