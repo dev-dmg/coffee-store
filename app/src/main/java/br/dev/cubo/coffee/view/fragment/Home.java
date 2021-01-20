@@ -12,6 +12,20 @@ import androidx.fragment.app.Fragment;
 
 import br.dev.cubo.coffee.R;
 
+/**
+ *
+ *
+ * @company CUBO
+ * @site www.cubo.dev.br
+ * @phone +55 11 9-7727-8055
+ * @department development/support and design UI & UX
+ *
+ * @author D.M.G.
+ * @since create at 2021-17-01
+ *
+ *
+ */
+
 public class Home extends Fragment {
 
     private View v;
@@ -25,7 +39,7 @@ public class Home extends Fragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.status));
+            window.setStatusBarColor(getResources().getColor(R.color.home_up));
         }
 
         return v;

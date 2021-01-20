@@ -15,4 +15,7 @@
 
     <color name="status">#00FFFFFF</color>
 
+    <color name="home_up">#eabd8c</color>
+    <color name="home_dow">#b78c69</color>
+
 </resources>

@@ -19,7 +19,7 @@ import java.util.List;
 import br.dev.cubo.coffee.R;
 import br.dev.cubo.coffee.adapter.SliderAdapter;
 import br.dev.cubo.coffee.view.fragment.BoySlide;
-import br.dev.cubo.coffee.view.fragment.GrilSlide;
+import br.dev.cubo.coffee.view.fragment.BikeSlider;
 import br.dev.cubo.coffee.view.fragment.StoreSlide;
 
 /**
@@ -64,7 +64,7 @@ public class Onboarding extends AppCompatActivity {
         List<Fragment> list = new ArrayList<>();
         list.add(new StoreSlide());
         list.add(new BoySlide());
-        list.add(new GrilSlide());
+        list.add(new BikeSlider());
 
         pagerAdapter = new SliderAdapter(getSupportFragmentManager(), list);
         slider.setAdapter(pagerAdapter);
@@ -95,7 +95,7 @@ public class Onboarding extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226"));
             dots[i].setTextSize(35);
-            dots[i].setTextColor(getResources().getColor(R.color.brown_day));
+            dots[i].setTextColor(getResources().getColor(R.color.brown_light));
 
             dotsSlider.addView(dots[i]);
         }

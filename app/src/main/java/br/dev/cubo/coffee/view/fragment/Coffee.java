@@ -34,6 +34,20 @@ import br.dev.cubo.coffee.R;
 import br.dev.cubo.coffee.adapter.ListProduct;
 import br.dev.cubo.coffee.model.Produto;
 
+/**
+ *
+ *
+ * @company CUBO
+ * @site www.cubo.dev.br
+ * @phone +55 11 9-7727-8055
+ * @department development/support and design UI & UX
+ *
+ * @author D.M.G.
+ * @since create at 2021-17-01
+ *
+ *
+ */
+
 public class Coffee extends Fragment {
 
     private View v;
@@ -343,16 +357,16 @@ public class Coffee extends Fragment {
      * @return list with all products*/
     private List<Produto> allProduct() {
         return new ArrayList<>(Arrays.asList(
-                new Produto("Glace", "aaaaaaaaa", 7.92),
-                new Produto("Gelado", "aaaaaaaaa", 14.32),
-                new Produto("Latte", "aaaaaaaaa", 9.85),
-                new Produto("Americano", "aaaaaaaaa", 5.15),
-                new Produto("Irish", "aaaaaaaaa", 4.35),
-                new Produto("Cappuccino", "aaaaaaaaa", 10.21),
-                new Produto("Espresso", "aaaaaaaaa", 2.42),
-                new Produto("Especial", "aaaaaaaaa", 7.11),
-                new Produto("Levar", "aaaaaaaaa", 6.12),
-                new Produto("Pacote", "aaaaaaaaa", 22.64)
+                new Produto("Glace", "leite condensado", 7.92),
+                new Produto("Gelado", "bolas de sorvete", 14.32),
+                new Produto("Latte", "cobertura de sorvete", 9.85),
+                new Produto("Americano", "filtrado com papel ", 5.15),
+                new Produto("Irish", "açúcar mascavo", 4.35),
+                new Produto("Cappuccino", "chocolate em pó", 10.21),
+                new Produto("Expresso", "café solúvel", 2.42),
+                new Produto("Especial", "solúvel com sorvete", 7.11),
+                new Produto("Levar", "café solúvel", 6.12),
+                new Produto("Pacote", "orfeu intenso", 22.64)
         ));
     }
 

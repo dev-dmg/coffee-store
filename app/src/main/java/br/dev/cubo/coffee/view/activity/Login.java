@@ -6,6 +6,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import br.dev.cubo.coffee.R;
 
+/**
+ *
+ *
+ * @company CUBO
+ * @site www.cubo.dev.br
+ * @phone +55 11 9-7727-8055
+ * @department development/support and design UI & UX
+ *
+ * @author D.M.G.
+ * @since create at 2021-17-01
+ *
+ *
+ */
+
 public class Login extends AppCompatActivity {
 
     @Override

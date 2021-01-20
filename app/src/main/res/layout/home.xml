@@ -1,255 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragment.Home">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@color/home_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/home_dow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/ic_boy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:elevation="60dp"
+            android:background="@drawable/nav"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-            <!-- coffee -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:elevation="40dp"
-                android:layout_marginTop="70dp"
-                android:gravity="center"
-                android:backgroundTint="#95c4fc"
-                android:background="@drawable/bar_body"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-                    android:src="@drawable/ic_club"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="left|center"
-                    android:paddingVertical="5dp"
-                    android:backgroundTint="#78A7E6"
-                    android:background="@drawable/bar_card"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:padding="8dp"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_coff"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nosso Clube"
-                            android:fontFamily="sans-serif-black"
-                            android:textColor="@color/white"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Para os apaixonados em café"
-                            android:textColor="#E1E1E1"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- work -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:elevation="40dp"
                 android:layout_marginTop="40dp"
-                android:gravity="center"
-                android:backgroundTint="#fda8f3"
-                android:background="@drawable/bar_body"
-                android:orientation="vertical">
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-                    android:src="@drawable/ic_job"/>
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_notifications"
+                    android:backgroundTint="#987B63"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="left|center"
-                    android:paddingVertical="5dp"
-                    android:backgroundTint="#DA81D5"
-                    android:background="@drawable/bar_card"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:padding="8dp"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_fastfood"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sempre ligado"
-                            android:fontFamily="sans-serif-black"
-                            android:textColor="@color/white"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Café + acompanhamentos"
-                            android:textColor="#E1E1E1"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- family -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:elevation="40dp"
-                android:layout_marginTop="40dp"
-                android:gravity="center"
-                android:backgroundTint="#D87979"
-                android:background="@drawable/bar_body"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="200dp"
-                    android:src="@drawable/ic_love"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="left|center"
-                    android:paddingVertical="5dp"
-                    android:backgroundTint="#BF5E5C"
-                    android:background="@drawable/bar_card"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:padding="8dp"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_family"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Em casa"
-                            android:fontFamily="sans-serif-black"
-                            android:textColor="@color/white"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Curta um bom café em casa"
-                            android:textColor="#E1E1E1"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- maps -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:elevation="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="100dp"
-                android:backgroundTint="#E3AE6B"
-                android:background="@drawable/bar_body"
-                android:orientation="vertical">
-
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_map"/>
+                    android:text="Novidades"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#987B63"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- coffee -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="left|center"
-                    android:paddingVertical="5dp"
-                    android:backgroundTint="#D8A15B"
-                    android:background="@drawable/bar_card"
-                    android:orientation="horizontal">
+                    android:layout_marginHorizontal="20dp"
+                    android:elevation="40dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:backgroundTint="#756147"
+                    android:background="@drawable/bar_body"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:padding="8dp"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_location"/>
+                        android:layout_width="100dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ic_club"/>
 
                     <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingVertical="5dp"
+                        android:backgroundTint="#9A856A"
+                        android:background="@drawable/bar_card"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="8dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_coff"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nosso Clube"
+                                android:fontFamily="sans-serif-black"
+                                android:textColor="@color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Para os apaixonados em café"
+                                android:textColor="#E1E1E1"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- work -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:elevation="40dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:backgroundTint="#E1A75E"
+                    android:background="@drawable/bar_body"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ic_job"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingVertical="5dp"
+                        android:backgroundTint="#EAB674"
+                        android:background="@drawable/bar_card"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="8dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_fastfood"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sempre ligado"
+                                android:fontFamily="sans-serif-black"
+                                android:textColor="@color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Café + acompanhamentos"
+                                android:textColor="#E1E1E1"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- family -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:elevation="40dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:backgroundTint="#D87979"
+                    android:background="@drawable/bar_body"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ic_love"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingVertical="5dp"
+                        android:backgroundTint="#BF5E5C"
+                        android:background="@drawable/bar_card"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="8dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_family"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Em casa"
+                                android:fontFamily="sans-serif-black"
+                                android:textColor="@color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Curta um bom café em casa"
+                                android:textColor="#E1E1E1"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- maps -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:elevation="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="100dp"
+                    android:backgroundTint="#978C7E"
+                    android:background="@drawable/bar_body"
+                    android:orientation="vertical">
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:orientation="vertical">
+                        android:src="@drawable/ic_map"/>
 
-                        <TextView
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingVertical="5dp"
+                        android:backgroundTint="#AC9F8E"
+                        android:background="@drawable/bar_card"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="8dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_location"/>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nossas Lojas"
-                            android:fontFamily="sans-serif-black"
-                            android:textColor="@color/white"/>
+                            android:paddingLeft="10dp"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="veja no mapa onde estamos"
-                            android:textColor="#E1E1E1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nossas Lojas"
+                                android:fontFamily="sans-serif-black"
+                                android:textColor="@color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="veja no mapa onde estamos"
+                                android:textColor="#E1E1E1"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
+
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

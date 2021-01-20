@@ -1,6 +1,7 @@
 package br.dev.cubo.coffee.view.fragment;
 
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -10,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -21,9 +25,24 @@ import androidx.fragment.app.Fragment;
 
 import br.dev.cubo.coffee.R;
 
+/**
+ *
+ *
+ * @company CUBO
+ * @site www.cubo.dev.br
+ * @phone +55 11 9-7727-8055
+ * @department development/support and design UI & UX
+ *
+ * @author D.M.G.
+ * @since create at 2021-17-01
+ *
+ *
+ */
+
 public class Cart extends Fragment {
 
     private View v;
+    private ImageView imgCard;
     private TextView valueAllPay, size, nameProduct, qtdProduct;
     private LinearLayout addPay, cancel, content, header, pay, cancelPay, paymtDone;
     private ConstraintLayout choicePay, payDone;
@@ -49,6 +68,9 @@ public class Cart extends Fragment {
 
         getComponent();
         getButton();
+
+        @SuppressLint("ResourceType") Animation up = AnimationUtils.loadAnimation(getContext(), R.animator.splash_up);
+        imgCard.startAnimation(up);
 
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(CART, Context.MODE_PRIVATE);
         name = sharedPreferences.getString("name_key", null);
@@ -282,6 +304,8 @@ public class Cart extends Fragment {
         pay = v.findViewById(R.id.pay);
         cancelPay = v.findViewById(R.id.cancelPay);
         paymtDone = v.findViewById(R.id.paymtDone);
+
+        imgCard = v.findViewById(R.id.imgCard);
 
         scrollView = v.findViewById(R.id.scrollView);
     }

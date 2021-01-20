@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -28,7 +29,7 @@ import br.dev.cubo.coffee.R;
  *
  */
 
-public class BoySlide extends Fragment {
+public class BikeSlider extends Fragment {
 
     private View v;
     private ImageView img;
@@ -40,10 +41,10 @@ public class BoySlide extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.slide_boy, container, false);
+        v = inflater.inflate(R.layout.slide_bike, container, false);
 
-        img = v.findViewById(R.id.imgMem);
-        txt  = v.findViewById(R.id.txtMem);
+        img = v.findViewById(R.id.imgBike);
+        txt = v.findViewById(R.id.txtBike);
 
         getAnime();
 
@@ -56,7 +57,7 @@ public class BoySlide extends Fragment {
     @SuppressLint("ResourceType")
     private void getAnime() {
 
-        mov = AnimationUtils.loadAnimation(getContext(), R.animator.splash_up);
-        txtAnim = AnimationUtils.loadAnimation(getContext(), R.animator.txt);
+         mov = AnimationUtils.loadAnimation(getContext(), R.animator.bike);
+         txtAnim = AnimationUtils.loadAnimation(getContext(), R.animator.txt);
     }
 }

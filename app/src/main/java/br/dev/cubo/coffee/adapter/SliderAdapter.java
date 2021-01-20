@@ -1,5 +1,19 @@
 package br.dev.cubo.coffee.adapter;
 
+/**
+ *
+ *
+ * @company CUBO
+ * @site www.cubo.dev.br
+ * @phone +55 11 9-7727-8055
+ * @department development/support and design UI & UX
+ *
+ * @author D.M.G.
+ * @since create at 2021-17-01
+ *
+ *
+ */
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

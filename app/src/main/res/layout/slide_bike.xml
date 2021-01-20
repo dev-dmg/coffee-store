@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
-    tools:context=".view.fragment.StoreSlide">
+    tools:context=".view.fragment.BikeSlider">
 
     <LinearLayout
-        android:id="@+id/txtHome"
+        android:id="@+id/txtBike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sofia"
-            android:text="Olá"
+            android:text="Ei, relaxa,"
             android:textColor="@color/brown"
             android:textSize="28sp" />
 
@@ -32,41 +32,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="3dp"
-            android:text="b  e m - v i n d o !"
+            android:text="Levamos até você!"
             android:textColor="@color/brown_light" />
 
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/cloude_r"
-        android:layout_width="180dp"
-        android:layout_height="130dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="124dp"
-        android:src="@drawable/ic_cloud"
-        app:layout_constraintBottom_toBottomOf="@+id/imgCoff"
-        app:layout_constraintEnd_toEndOf="@+id/imgCoff" />
-
-    <ImageView
-        android:id="@+id/cloude_l"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginRight="180dp"
-        android:src="@drawable/ic_cloud"
-        app:layout_constraintBottom_toBottomOf="@+id/imgCoff"
-        app:layout_constraintEnd_toEndOf="@+id/imgCoff"
-        app:layout_constraintTop_toTopOf="@+id/imgCoff"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imgCoff"
-        android:layout_width="290dp"
-        android:layout_height="200dp"
+        android:id="@+id/imgBike"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
         android:layout_marginBottom="250dp"
-        android:paddingRight="-50dp"
-        android:background="@drawable/ic_home_coffe"
+        android:background="@drawable/ic_bike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

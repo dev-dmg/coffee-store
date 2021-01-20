@@ -1,5 +1,19 @@
 package br.dev.cubo.coffee.model;
 
+/**
+ *
+ *
+ * @company CUBO
+ * @site www.cubo.dev.br
+ * @phone +55 11 9-7727-8055
+ * @department development/support and design UI & UX
+ *
+ * @author D.M.G.
+ * @since create at 2021-17-01
+ *
+ *
+ */
+
 public class Produto {
 
     private String nome;
@@ -35,11 +49,5 @@ public class Produto {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-//    @Override
-//    public String toString() {
-//        return "Produto: " + nome + " Descrição: " +
-//                desc + " Valor: " + valor;
-//    }
 
 }
