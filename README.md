@@ -16,7 +16,6 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Payment methods: cash, debit and / or credit
 - Splash screen
 - Onboarding
-- Object
 
 ## resources used
 - ScrollView 
@@ -27,6 +26,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - LinearLayout
 - RelativeLayout 
 - ConstraintLayout 
+- Object
 - Toast
 - ListView
 - Adapter
