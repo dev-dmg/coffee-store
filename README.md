@@ -50,7 +50,7 @@ Demo project of an app for a coffee shop [ Projeto de demonstração de aplicati
 - Dialog
 - Login
 
-
+##License
 
 ###### © 2021 all rights reserved
 
